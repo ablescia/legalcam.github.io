@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LegalCam Capture Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🕵️‍♂️ LegalCam Capture Tool</h1>
+    <p>Capture photos with verifiable forensic metadata</p>
+  </header>
+
+  <main>
+    <!-- Live camera preview -->
+    <section id="preview-section">
+      <video id="video" autoplay playsinline></video>
+    </section>
+
+    <!-- Camera and quality controls -->
+    <section id="controls-section">
+      <div class="control-group">
+        <label for="cameraSelect">Camera:</label>
+        <select id="cameraSelect"></select>
+      </div>
+
+      <div class="control-group">
+        <label for="qualitySelect">Image quality:</label>
+        <select id="qualitySelect">
+          <option value="0.25">Low</option>
+          <option value="0.5">Medium</option>
+          <option value="0.75">High</option>
+          <option value="1" selected>Very High</option>
+        </select>
+      </div>
+
+      <button id="captureBtn">📸 Capture</button>
+    </section>
+
+    <!-- Download links -->
+    <section id="download-section">
+    </section>
+
+    <!-- Metadata output -->
+    <section id="metadata-section">
+      <h2>Acquired Forensic Data</h2>
+      <pre id="metaOutput">⚠️ No photo captured yet</pre>
+    </section>
+
+    <!-- Canvas for internal rendering -->
+    <canvas id="canvas" style="display:none;"></canvas>
+  </main>
+
+  <footer>
+    <small>PoC Version • Antonio Blescia • © 2025</small>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  <!-- Load OpenTimestamps browserified build -->
+  <script src="https://opentimestamps.org/assets/javascripts/vendor/opentimestamps.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

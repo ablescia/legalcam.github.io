@@ -1,0 +1,174 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Courier New', monospace;
+  background-color: #111;
+  color: #eee;
+}
+
+/* Header */
+header {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+  color: #00ff99;
+}
+
+header p {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Main layout */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Video Preview */
+#preview-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  width: 100%;
+  max-height: 50vh;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: black;
+}
+
+/* Controls */
+#controls-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #1b1b1b;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  width: 100%;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: #ccc;
+}
+
+select, button {
+  background-color: #222;
+  color: #eee;
+  padding: 0.5rem 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #333;
+  cursor: pointer;
+}
+
+.download-button {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 18px;
+  background-color: #1976d2;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #125ea4;
+}
+
+/* Download links */
+#download-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem;
+}
+
+#downloadLink, #jsonLink {
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#downloadLink:hover, #jsonLink:hover {
+  background-color: #3da542;
+}
+
+/* Metadata output */
+#metadata-section {
+  padding: 1rem;
+  margin: 1rem;
+  width: 90%;
+  max-width: 900px;
+  background-color: #1b1b1b;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+
+#metadata-section h2 {
+  color: #00ffcc;
+  margin-bottom: 0.5rem;
+}
+
+#metaOutput {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  background-color: #000;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  color: #0f0;
+  overflow-x: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 1rem;
+  color: #666;
+}
